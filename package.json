@@ -1,0 +1,22 @@
+{
+  "name": "aaharva",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aaharva food rescue and redistribution platform",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c green,cyan \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "start": "npm --prefix server start",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test && npm --prefix client test",
+    "test:server": "npm --prefix server test",
+    "test:client": "npm --prefix client test",
+    "seed": "npm --prefix server run seed",
+    "db:indexes": "npm --prefix server run db:indexes"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
